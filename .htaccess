@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^representative-sign-in$ /careerweek/representative-sign-in/representative.html [R]
+RewriteRule ^student-sign-in$ /careerweek/student-sign-in/student.html [R]
+RewriteRule ^admin$ /careerweek/representative-sign-in/admin/representative.html [R]

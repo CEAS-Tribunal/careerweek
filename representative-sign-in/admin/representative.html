@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Fair Representative Sign In</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="outer-container">
+        <header>
+            <img src="../images/tribunal_logo.png">
+        </header>
+        <div class="container">
+            <h1>Printing Station</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="adminStation">
+            <h2>Printer Settings</h2>
+            <div class="content">
+                <p>Select a connected DYMO printer:</p>
+                <div class="printerSelect">
+                </div>
+                <input type="button" value="Refresh" id="refreshButton">
+            </div>
+        </div>
+
+        <div class="representative-container">
+            <h2>Representatives</h2>
+            <div class="select-box" id="location-select">
+                <select required>
+                    <option value="" disabled="disabled" selected="selected">▼ Select Location</option>
+                </select>
+            </div>
+            <div class="tbody">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Company</th>
+                        <th>Title</th>
+                        <th>Time Added</th>
+                    </tr>
+                </table>
+            </div>
+            <input type="button" value="Update" id="update-button">
+            <input type="button" value="Print All Uprinted" id="print-button">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="DYMO.Label.Framework.3.0.js" type="text/javascript"></script>
+    <script src="admin.js" type="text/javascript"></script>
+</body>
+</html>

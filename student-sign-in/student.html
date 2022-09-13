@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Fair Student Sign In</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="outer-container">
+        <header>
+            <img src="./images/tribunal_logo.png">
+        </header>
+        <div class="container">
+            <h1>Student Sign In</h1>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Name" autocomplete="off">
+
+                <input type="text" id="major" name="major" placeholder="Major" autocomplete="off">
+                
+                <div class="type" id="type">
+                    <select required>
+                        <option value="" disabled="disabled" selected="selected">▼ Select Type</option>
+                        <option value="Internship">Internship</option>
+                        <option value="Co-op">Co-op</option>
+                        <option value="Part-time">Part-time</option>
+                        <option value="Full-time">Full-time</option>
+                    </select>
+                    <div class="select__arrow"></div>
+                </div>
+
+                <input type="button" value="Print" id="printButton">
+            </form>
+
+            <div class="adminStation">
+                <h2>Printer Settings</h2>
+                <div class="content">
+                    <p>Select a connected DYMO printer:</p>
+                    <div class="printerSelect">
+                    </div>
+                    <input type="button" value="Refresh" id="refreshButton">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="DYMO.Label.Framework.3.0.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
