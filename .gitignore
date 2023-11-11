@@ -1,0 +1,6 @@
+*.DS_Store
+.DS_Store
+node_modules
+build
+representative-sign-in/includes/mysqli.php
+student-sign-in/includes/mysqli.php
