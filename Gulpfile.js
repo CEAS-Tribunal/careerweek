@@ -1,7 +1,7 @@
 const gulp = require("gulp");
-const autoprefixer = require("gulp-autoprefixer");
-const babel = require("gulp-babel");
-const uglify = require("gulp-uglify");
+// const autoprefixer = require("gulp-autoprefixer");
+// const babel = require("gulp-babel");
+// const uglify = require("gulp-uglify");
 const rollup = require("gulp-rollup");
 const rename = require("gulp-rename");
 const replace = require("gulp-replace");
@@ -53,7 +53,7 @@ function scripts() {
 
 function templates() {
   return gulp
-    .src("index.html")
+    .src("representative.html") // was index.html
     .pipe(
       replace(
         '<script src="scripts/main.js" type=module></script>',
@@ -71,7 +71,7 @@ function templates() {
 
 function devTemplates() {
   return gulp
-    .src("index.html")
+    .src("representative.html") // was index.html
     .pipe(
       replace(
         '<script src="build/main.min.js"></script>',
