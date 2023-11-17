@@ -1,9 +1,9 @@
 <?php
 
 error_reporting(-1);
-set_include_path('/web/sites/www.tribunal.uc.edu/htdocs/careerweek/representative-sign-in/includes/');
+// set_include_path('/web/sites/www.tribunal.uc.edu/htdocs/careerweek/representative-sign-in/includes/');
 
-require_once("mysqli.php");
+require_once("../includes/mysqli.php");
 
 $sql = "SELECT id, name, company, title, `sign in time`, printed, location FROM representative_sign_in";
 
