@@ -86,9 +86,10 @@ var getEmployers = function() {
                 employerName = employerInfo[i]["name"];
                 employerCompany = employerInfo[i]["company"];
                 employerTitle = employerInfo[i]["title"];
+                employerboothLocation = employerInfo[i]["boothLocation"];
                 employerSignInTime = employerInfo[i]["sign in time"];
                 employerPrintedStatus = employerInfo[i]["printed"];
-                generateRepresentatives(representativeTable, employerId, employerName, employerCompany, employerTitle, employerSignInTime, employerPrintedStatus);
+                generateRepresentatives(representativeTable, employerId, employerName, employerCompany, employerTitle, employerboothLocation, employerSignInTime, employerPrintedStatus);
             }
         }
     });
@@ -97,7 +98,7 @@ var getEmployers = function() {
 getEmployers();
 var repIdStart = "rep-";
 
-var generateRepresentatives = function(table, id, name, company, title, signInTime, printedStatus) {
+var generateRepresentatives = function(table, id, name, company, title, boothLocation, signInTime, printedStatus) {
     var tableRow = document.createElement("tr");
     if (printedStatus == "0") {
         tableRow.setAttribute("class", "unprinted");
@@ -118,12 +119,15 @@ var generateRepresentatives = function(table, id, name, company, title, signInTi
     tableRepCompany.textContent = company;
     var tableRepTitle = document.createElement("td");
     tableRepTitle.textContent = title;
+    var tableRepBoothLocation = document.createElement("td");
+    tableRepBoothLocation.textContent = boothLocation;
     var tableRepSignInTime = document.createElement("td");
     tableRepSignInTime.textContent = signInTime;
 
     tableRow.appendChild(tableRepName);
     tableRow.appendChild(tableRepCompany);
     tableRow.appendChild(tableRepTitle);
+    tableRow.appendChild(tableRepBoothLocation);
     tableRow.appendChild(tableRepSignInTime);
 
     table.appendChild(tableRow);

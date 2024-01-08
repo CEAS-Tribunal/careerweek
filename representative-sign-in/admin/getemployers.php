@@ -5,7 +5,7 @@ error_reporting(-1);
 
 require_once("../includes/mysqli.php");
 
-$sql = "SELECT id, name, company, title, `sign in time`, printed, location FROM representative_sign_in";
+$sql = "SELECT id, name, company, title, boothLocation, `sign in time`, printed, location FROM representative_sign_in"; // add boothLocation
 
 $result = $mysqli->query($sql);
 
