@@ -2,5 +2,5 @@
 .DS_Store
 node_modules
 build
-representative-sign-in/includes/mysqli.php
-student-sign-in/includes/mysqli.php
+representative-sign-in/includes
+student-sign-in/includes
