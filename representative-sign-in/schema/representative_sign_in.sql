@@ -32,6 +32,7 @@ CREATE TABLE `representative_sign_in` (
   `company` varchar(64) NOT NULL,
   `title` varchar(64) NOT NULL,
   `email` varchar(64) NOT NULL,
+  `boothLocation` varchar(64) NOT NULL,
   `id` int UNSIGNED NOT NULL,
   `sign in time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `printed` int DEFAULT NULL,
@@ -42,8 +43,8 @@ CREATE TABLE `representative_sign_in` (
 -- Dumping data for table `representative_sign_in`
 --
 
-INSERT INTO `representative_sign_in` (`name`, `company`, `title`, `email`, `id`, `sign in time`, `printed`, `location`) VALUES
-('Ary Sharma', 'CEAS Tribunal', 'Volunteer', 'sharm3a8@mail.uc.edu', 2, '2019-09-25 11:41:38', 1, 'REC Center');
+INSERT INTO `representative_sign_in` (`name`, `company`, `title`, `email`, `boothLocation`, `id`, `sign in time`, `printed`, `location`) VALUES
+('Ary Sharma', 'CEAS Tribunal', 'Volunteer', 'sharm3a8@mail.uc.edu', 'A15', 2, '2019-09-25 11:41:38', 1, 'REC Center');
 
 --
 -- Indexes for dumped tables

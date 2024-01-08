@@ -9,6 +9,7 @@ $name="";
 $company="";
 $title="";
 $email="";
+$boothLocation="";
 $printed = 0;
 $location = "";
 
@@ -16,10 +17,11 @@ $name = mysqli_real_escape_string ($mysqli, $_POST["nameText"]);
 $company = mysqli_real_escape_string ($mysqli, $_POST["companyText"]);
 $title = mysqli_real_escape_string ($mysqli, $_POST["titleText"]);
 $email = mysqli_real_escape_string ($mysqli, $_POST["emailText"]);
+$boothLocation = mysqli_real_escape_string ($mysqli, $_POST["boothLocationText"]);
 $location = mysqli_real_escape_string ($mysqli, $_POST["locationText"]);
 
-$sql ="INSERT INTO representative_sign_in (name, company, title, email, printed, location)
-	VALUES ('".$name."','".$company."','".$title."','".$email."','".$printed."','".$location."')";
+$sql ="INSERT INTO representative_sign_in (name, company, title, email, boothLocation, printed, location)
+	VALUES ('".$name."','".$company."','".$title."','".$email."','" .$boothLocation. "','" .$printed."','".$location."')";
 
 if (!$mysqli->query($sql)) {
 	echo "Failed";

@@ -32,13 +32,14 @@ $.get("getlocations.php", function(data) {
 enterButton = document.querySelector('form #enterButton');
 
 // Submit sign in information
-var signIn = function(name, company, title, email, location) {
+var signIn = function(name, company, title, email, boothLocation, location) {
     $.post("representative.php",
     {
         nameText: name,
         companyText: company,
         titleText: title,
         emailText: email,
+        boothLocationText: boothLocation,
         locationText: location,
     })
     .done(function( data ) {
@@ -64,7 +65,7 @@ var signIn = function(name, company, title, email, location) {
  function getSelectedLocation() {
     var locations = document.getElementsByName('radio');
     var  locVal = "";
-    locations.forEach(location =>{
+    locations.forEach(location => {
     if(location.checked == true){
         locVal =  location.value;
     }
@@ -72,22 +73,35 @@ var signIn = function(name, company, title, email, location) {
 return locVal;
 }
 
+// Reset form for next representative
+function clearResponses(name, company, title, email, boothLocation) {
+    name.value = "";
+    company.value = "";
+    title.value = "";
+    email.value = "";
+    boothLocation.value = "";
+    var locations = document.getElementsByName('radio');
+    locations.forEach(location => {
+        if(location.checked == true){
+            location.checked = false;
+        }
+})
+}
+
 enterButton.onclick = function() {
     var name = document.querySelector('form #name');
     var company = document.querySelector('form #company');
     var title = document.querySelector('form #title');
     var email = document.querySelector('form #email');
+    var boothLocation = document.querySelector('form #boothLocation')
     var location = getSelectedLocation();
-    if(name.value && company.value && title.value){
-        signIn(name.value, company.value, title.value, email.value,location );
+    if(name.value && company.value && title.value && boothLocation.value){
+        signIn(name.value, company.value, title.value, email.value, boothLocation.value, location);
 
         document.querySelector(".lds-ellipsis").style.display = "block";
         enterButton.style.display = "none";
 
-        name.value = "";
-        company.value = "";
-        title.value = "";
-        email.value = "";
+        clearResponses(name, company, title, email, boothLocation, location);
     } else {
         alert("Please complete the form before signing in.")
     }
