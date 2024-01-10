@@ -209,11 +209,11 @@ printAllButton.onclick = function() {
 document.addEventListener('keydown', (event) => {
     const keyName = event.key;
 
-    if (event.ctrlKey && keyName === "p") {
+    if (event.altKey && keyName === "p") {
         printAllButton.click();
     }
 
-    if (event.ctrlKey && keyName === "u") {
+    if (event.altKey && keyName === "u") {
         updateButton.click();
     }
 }, false);
