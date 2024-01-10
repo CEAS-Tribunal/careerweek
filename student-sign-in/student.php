@@ -1,9 +1,11 @@
 <?php
 
 error_reporting(-1);
-set_include_path('/web/sites/www.tribunal.uc.edu/htdocs/careerweek/student-sign-in/includes/');
+// set_include_path('/web/sites/www.tribunal.uc.edu/htdocs/careerweek/student-sign-in/includes/');
 
-require_once("mysqli.php");
+// require_once("mysqli.php");
+require_once("./includes/mysqli.php");
+
 
 $name="";
 $major="";
